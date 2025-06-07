@@ -59,7 +59,7 @@ const StatsSection = () => {
     <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-700 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>')] bg-repeat" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">

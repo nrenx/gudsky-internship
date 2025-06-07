@@ -53,7 +53,7 @@ const FeaturesSection = () => {
     <section className="py-20 px-4 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23000000" fill-opacity="1"><circle cx="30" cy="30" r="1"/></g></svg>')] bg-repeat" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900" />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
