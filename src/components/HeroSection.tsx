@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with parallax effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800">
         <div className="absolute inset-0 bg-black/20" />
@@ -42,7 +39,7 @@ const HeroSection = () => {
             </Button>
           </Link>
           
-          <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-full">
+          <Button variant="outline" size="lg" className="border-white/30 text-white font-semibold px-8 py-4 rounded-full bg-zinc-950 hover:bg-zinc-800">
             <Play className="w-5 h-5 mr-2" />
             Watch Introduction
           </Button>
@@ -75,8 +72,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
