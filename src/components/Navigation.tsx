@@ -20,8 +20,7 @@ const Navigation = () => {
     { name: "About", href: "/about" },
     { name: "Courses", href: "/courses" },
     { name: "Dr. Sita Rani", href: "/dr-sita-rani" },
-    { name: "Research", href: "/research" },
-    { name: "Contact", href: "/contact" }
+    { name: "Research", href: "/research" }
   ];
 
   return (
@@ -30,10 +29,10 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src="/lovable-uploads/bb2f3804-f9d4-4170-83b6-9b3ed54de9e8.png" alt="Gudsky Research Foundation" className="h-10 w-10" />
+            <img src="/lovable-uploads/bb2f3804-f9d4-4170-83b6-9b3ed54de9e8.png" alt="Gudsky Research Foundation" className="h-12 w-12 shadow-lg rounded-lg" />
             <div className="flex flex-col">
-              
-              
+              <span className="font-bold text-lg bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Gudsky Research</span>
+              <span className="text-sm text-gray-600">Foundation</span>
             </div>
           </Link>
 
