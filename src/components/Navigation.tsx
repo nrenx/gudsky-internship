@@ -47,9 +47,7 @@ const Navigation = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              <Search className="w-4 h-4" />
-            </Button>
+            
             <Link to="/account">
               <Button variant="ghost" size="sm">
                 <User className="w-4 h-4" />
