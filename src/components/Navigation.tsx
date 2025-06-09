@@ -1,31 +1,31 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Search, User } from "lucide-react";
+import { Menu, X, User, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const navigationItems = [{
-    name: "Home",
-    href: "/"
-  }, {
-    name: "About",
-    href: "/about"
-  }, {
-    name: "Courses",
-    href: "/courses"
-  }, {
-    name: "Dr. Sita Rani",
-    href: "/dr-sita-rani"
-  }, {
-    name: "Research",
-    href: "/research"
-  }, {
-    name: "Contact",
-    href: "/contact"
-  }];
-  return <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
+  
+  const navigationItems = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Courses", href: "/courses" },
+    { name: "Dr. Sita Rani", href: "/dr-sita-rani" },
+    { name: "Research", href: "/research" },
+    { name: "Contact", href: "/contact" }
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -39,23 +39,51 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map(item => <Link key={item.name} to={item.href} className={cn("text-sm font-medium transition-colors hover:text-blue-600 relative", location.pathname === item.href ? "text-blue-600" : "text-gray-700")}>
+            {navigationItems.map(item => (
+              <Link 
+                key={item.name} 
+                to={item.href} 
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-blue-600 relative",
+                  location.pathname === item.href ? "text-blue-600" : "text-gray-700"
+                )}
+              >
                 {item.name}
-                {location.pathname === item.href && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full" />}
-              </Link>)}
+                {location.pathname === item.href && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full" />
+                )}
+              </Link>
+            ))}
           </div>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            
             <Link to="/account">
               <Button variant="ghost" size="sm">
                 <User className="w-4 h-4" />
               </Button>
             </Link>
-            <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-              Get Started
-            </Button>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                  Get Started
+                  <ChevronDown className="w-4 h-4 ml-2" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuItem asChild>
+                  <Link to="/register/student" className="w-full">
+                    Register as Student
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/register/teacher" className="w-full">
+                    Register as Teacher
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile menu button */}
@@ -67,24 +95,49 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && <div className="md:hidden">
+        {isOpen && (
+          <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-sm rounded-lg mt-2 border">
-              {navigationItems.map(item => <Link key={item.name} to={item.href} className={cn("block px-3 py-2 rounded-md text-base font-medium transition-colors", location.pathname === item.href ? "text-blue-600 bg-blue-50" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50")} onClick={() => setIsOpen(false)}>
+              {navigationItems.map(item => (
+                <Link 
+                  key={item.name} 
+                  to={item.href} 
+                  className={cn(
+                    "block px-3 py-2 rounded-md text-base font-medium transition-colors",
+                    location.pathname === item.href 
+                      ? "text-blue-600 bg-blue-50" 
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
                   {item.name}
-                </Link>)}
+                </Link>
+              ))}
               <div className="px-3 py-2 space-y-2">
                 <Link to="/account">
                   <Button variant="outline" className="w-full">
                     My Account
                   </Button>
                 </Link>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600">
-                  Get Started
-                </Button>
+                <div className="space-y-2">
+                  <Link to="/register/student">
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600">
+                      Register as Student
+                    </Button>
+                  </Link>
+                  <Link to="/register/teacher">
+                    <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600">
+                      Register as Teacher
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navigation;
