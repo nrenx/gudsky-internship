@@ -1,12 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 const HeroSection = () => {
+  // Preload hero background image
+  useEffect(() => {
+    const heroImg = new Image();
+    heroImg.src = "/lovable-uploads/56ca0dc0-f42f-4475-9dd1-4829d659b45e.png";
+  }, []);
+
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with parallax effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800">
         <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/56ca0dc0-f42f-4475-9dd1-4829d659b45e.png')] bg-cover bg-center opacity-10" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{
+            backgroundImage: "url('/lovable-uploads/56ca0dc0-f42f-4475-9dd1-4829d659b45e.png')",
+            willChange: 'transform'
+          }}
+        />
       </div>
       
       {/* Floating elements */}
@@ -74,4 +88,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;

@@ -1,4 +1,3 @@
-
 import { Facebook, Linkedin, Mail, Phone, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -22,6 +21,8 @@ const Footer = () => {
                 src="/lovable-uploads/bb2f3804-f9d4-4170-83b6-9b3ed54de9e8.png" 
                 alt="Gudsky Research Foundation" 
                 className="h-12 w-12 shadow-lg rounded-lg"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <h3 className="font-bold text-lg bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">Gudsky Research</h3>

@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,13 +7,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Target, Eye, Award, Users, Globe, BookOpen, MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Navigation />
       
-      <main>
+      <main className="pt-16">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
           <div className="max-w-4xl mx-auto text-center">
@@ -92,7 +92,7 @@ const About = () => {
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
@@ -102,7 +102,7 @@ const About = () => {
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Global Impact</h3>
@@ -128,58 +128,51 @@ const About = () => {
           </div>
         </section>
 
-        {/* Our Prestigious Partners Section */}
-        <section className="py-20 px-4 bg-white/50 backdrop-blur-sm">
+        {/* Our Prestigious Partners */}
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <Badge variant="outline" className="mb-4">Our Network</Badge>
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 Our Prestigious Partners
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Collaborating with leading institutions and organizations worldwide.
+                We collaborate with leading institutions and organizations to advance research and education globally.
               </p>
             </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/70 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <OptimizedImage
+                    src="/lovable-uploads/645152d5-83e5-423e-a102-d18822ac5b1b.png"
+                    alt="Academic Collaborations and Partnerships"
+                    className="w-full h-64 object-cover rounded-lg mb-6"
+                    loading="lazy"
+                  />
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Academic Collaborations</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Building strong partnerships with universities and research institutions worldwide to foster 
+                    collaborative research initiatives and knowledge exchange programs.
+                  </p>
+                </CardContent>
+              </Card>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-16">
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img 
-                  src="/lovable-uploads/828ffc02-6e62-4bc9-9482-dd2abcc6f6e9.png" 
-                  alt="IEEE" 
-                  className="h-16 w-auto mx-auto opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img 
-                  src="/lovable-uploads/a2cff32e-0e1c-44ef-a7d7-425f35f3cac6.png" 
-                  alt="Manipal University" 
-                  className="h-16 w-auto mx-auto opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img 
-                  src="/lovable-uploads/a0f5e31e-f844-4c24-80e6-7b8a435801c4.png" 
-                  alt="NIT Jalandhar" 
-                  className="h-16 w-auto mx-auto opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img 
-                  src="/lovable-uploads/645152d5-83e5-423e-a102-d18822ac5b1b.png" 
-                  alt="Dhanbad Institute of Technology" 
-                  className="h-16 w-auto mx-auto opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Our Collaboration</h3>
-              <div className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
-                <img 
-                  src="/lovable-uploads/645152d5-83e5-423e-a102-d18822ac5b1b.png" 
-                  alt="Dhanbad Institute of Technology" 
-                  className="h-20 w-auto mx-auto"
-                />
-              </div>
+              <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/70 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <OptimizedImage
+                    src="/lovable-uploads/828ffc02-6e62-4bc9-9482-dd2abcc6f6e9.png"
+                    alt="Industry Partnerships and Corporate Collaborations"
+                    className="w-full h-64 object-cover rounded-lg mb-6"
+                    loading="lazy"
+                  />
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Industry Partnerships</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Collaborating with leading corporations and technology companies to bridge the gap between 
+                    academic research and real-world applications, creating innovative solutions for industry challenges.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
