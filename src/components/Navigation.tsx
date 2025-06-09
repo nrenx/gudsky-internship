@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, User, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -69,13 +69,6 @@ const Navigation = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/account">
-              <Button variant="outline" size="sm">
-                <User className="w-4 h-4 mr-2" />
-                My Account
-              </Button>
-            </Link>
-            
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
@@ -126,11 +119,6 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Link to="/account">
-                  <Button variant="outline" className="w-full">
-                    My Account
-                  </Button>
-                </Link>
                 <div className="space-y-2">
                   <Link to="/register/student">
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600">

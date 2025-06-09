@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,7 +93,7 @@ const About = () => {
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
@@ -102,7 +103,7 @@ const About = () => {
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Global Impact</h3>
@@ -114,8 +115,103 @@ const About = () => {
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
+        {/* Our Prestigious Partners - Our Published Papers Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-4">Our Network</Badge>
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Our Published Papers
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                We collaborate with leading institutions and organizations to advance research and publish in prestigious venues.
+              </p>
+            </div>
+            
+            <Card className="border-0 bg-white/80 backdrop-blur-sm shadow-xl">
+              <CardContent className="p-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-lg flex items-center justify-center p-4">
+                      <img 
+                        src="/lovable-uploads/2c5b1076-a885-4e22-8e90-ff0faef3a4b6.png" 
+                        alt="NIT Institute" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-center text-sm">NIT Institute</h4>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-lg flex items-center justify-center p-4">
+                      <div className="text-blue-600 font-bold text-3xl">IEEE</div>
+                    </div>
+                    <h4 className="font-semibold text-center text-sm">IEEE Publications</h4>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-lg flex items-center justify-center p-4">
+                      <img 
+                        src="/lovable-uploads/a2cff32e-0e1c-44ef-a7d7-425f35f3cac6.png" 
+                        alt="Manipal University" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-center text-sm">Manipal University</h4>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-lg flex items-center justify-center p-4">
+                      <img 
+                        src="/lovable-uploads/a0f5e31e-f844-4c24-80e6-7b8a435801c4.png" 
+                        alt="NIT Jalandhar" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-center text-sm">NIT Jalandhar</h4>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Our Collaboration Section */}
         <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                Our Collaboration
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Building partnerships with academic institutions for collaborative research and development.
+              </p>
+            </div>
+            
+            <Card className="border-0 bg-white/80 backdrop-blur-sm shadow-xl">
+              <CardContent className="p-12">
+                <div className="flex justify-center">
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="w-48 h-48 bg-white rounded-lg shadow-lg flex items-center justify-center p-6">
+                      <img 
+                        src="/lovable-uploads/d704cc82-c8ce-431c-9abc-ad46760cae7e.png" 
+                        alt="University Collaboration" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-center text-lg">Academic Partnership</h4>
+                    <p className="text-gray-600 text-center max-w-md">
+                      Collaborative research initiatives with leading universities and academic institutions.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-20 px-4 bg-white/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto text-center">
             <div className="mb-16">
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
@@ -124,55 +220,6 @@ const About = () => {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Gudsky Research Foundation is committed to providing top-quality AI & ML education, hands-on research opportunities, and expert mentorship to help you excel in your career. Our industry-focused approach ensures practical learning, skill development, and real-world application of AI concepts.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Prestigious Partners */}
-        <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="mb-4">Our Network</Badge>
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Our Prestigious Partners
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We collaborate with leading institutions and organizations to advance research and education globally.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/70 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  <OptimizedImage
-                    src="/lovable-uploads/645152d5-83e5-423e-a102-d18822ac5b1b.png"
-                    alt="Academic Collaborations and Partnerships"
-                    className="w-full h-64 object-cover rounded-lg mb-6"
-                    loading="lazy"
-                  />
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Academic Collaborations</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Building strong partnerships with universities and research institutions worldwide to foster 
-                    collaborative research initiatives and knowledge exchange programs.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/70 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  <OptimizedImage
-                    src="/lovable-uploads/828ffc02-6e62-4bc9-9482-dd2abcc6f6e9.png"
-                    alt="Industry Partnerships and Corporate Collaborations"
-                    className="w-full h-64 object-cover rounded-lg mb-6"
-                    loading="lazy"
-                  />
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Industry Partnerships</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Collaborating with leading corporations and technology companies to bridge the gap between 
-                    academic research and real-world applications, creating innovative solutions for industry challenges.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
