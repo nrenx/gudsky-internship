@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -16,13 +15,14 @@ const Navigation = () => {
     logoImg.src = "/lovable-uploads/bb2f3804-f9d4-4170-83b6-9b3ed54de9e8.png";
   }, []);
 
+  // "About" is now the last item
   const navigationItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
     { name: "Courses", href: "/courses" },
     { name: "Dr. Sita Rani", href: "/dr-sita-rani" },
     { name: "Research", href: "/research" },
-    { name: "Career", href: "/career" }
+    { name: "Career", href: "/career" },
+    { name: "About", href: "/about" }
   ];
 
   return (
