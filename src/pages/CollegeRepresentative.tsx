@@ -115,11 +115,11 @@ const CollegeRepresentative = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Navigation />
       
-      <main className="pt-20">
+      <main className="pt-16">
         {/* Back Button */}
-        <div className="max-w-6xl mx-auto px-4 pt-8">
+        <div className="max-w-6xl mx-auto px-4 pt-4">
           <Link to="/career">
-            <Button variant="ghost" className="mb-6">
+            <Button variant="ghost" className="mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Career Programs
             </Button>
@@ -127,15 +127,15 @@ const CollegeRepresentative = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-16 px-4">
+        <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <Badge className="mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-lg px-6 py-3">
+            <Badge className="mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-lg px-6 py-3">
               🌟 Exclusive Leadership Program
             </Badge>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               College Representative Program
             </h1>
-            <p className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto">
               Become a Leader in Tech Innovation and Research Excellence! 
               <br />
               <span className="text-lg font-medium bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -144,17 +144,17 @@ const CollegeRepresentative = () => {
             </p>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border shadow-lg">
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">6</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">6</div>
                 <div className="text-gray-600">Exclusive Positions per College</div>
               </div>
               <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border shadow-lg">
-                <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-2">1 Year</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-2">1 Year</div>
                 <div className="text-gray-600">Program Duration</div>
               </div>
               <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border shadow-lg">
-                <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">100%</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">100%</div>
                 <div className="text-gray-600">Research/Project Offer for Top Performers</div>
               </div>
             </div>
