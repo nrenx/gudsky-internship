@@ -52,8 +52,11 @@ const HeroSection = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
-          
-          <Button variant="outline" size="lg" className="border-white/30 font-semibold px-8 py-4 bg-zinc-950 hover:bg-zinc-800 rounded-full text-zinc-50">
+
+          <Button
+            size="lg"
+            className="border border-white/30 font-semibold px-8 py-4 bg-blue-900/80 hover:bg-blue-900/90 focus:bg-blue-900/90 rounded-full text-zinc-50 shadow-lg transition-colors"
+          >
             <Play className="w-5 h-5 mr-2" />
             Watch Introduction
           </Button>
