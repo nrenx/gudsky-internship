@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -50,13 +51,26 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
+				// New custom accent and logo colors
+				emerald: {
+					DEFAULT: "#10b981",
+					light: "#6ee7b7",
+					dark: "#047857"
 				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+				teal: {
+					DEFAULT: "#14b8a6",
+					light: "#5eead4",
+					dark: "#0f766e"
+				},
+				gold: {
+					DEFAULT: "#F9C846", // Logo-aligned gold accent
+					light: "#FFE28C",
+					dark: "#997200"
+				},
+				navy: {
+					DEFAULT: "#1e293b", // Deep blue for contrast backgrounds
+					light: "#334155",
+					dark: "#0f172a"
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -67,7 +81,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				success: "#34D399",
+				info: "#38BDF8",
+				warning: "#F59E42",
+				error: "#EF4444"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -125,21 +143,34 @@ export default {
 					'0%': { transform: 'translateX(100%)' },
 					'100%': { transform: 'translateX(0)' }
 				},
-				'marquee': {
-					'0%': { transform: 'translateX(0%)' },
-					'100%': { transform: 'translateX(-50%)' }
+				// Enhanced new animation utilities
+				'stagger-fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(40px)' },
+					'40%': { opacity: '0.5', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'blur-in': {
+					'0%': { opacity: '0', filter: 'blur(10px)' },
+					'100%': { opacity: '1', filter: 'blur(0)' }
+				},
+				'spin-slow': {
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.3s ease-out',
-				'fade-out': 'fade-out 0.3s ease-out',
+				'fade-in': 'fade-in 0.3s cubic-bezier(0.32,0.72,0.3,1.25)',
+				'fade-out': 'fade-out 0.3s cubic-bezier(0.32,0.72,0.3,1.25)',
 				'scale-in': 'scale-in 0.2s ease-out',
-				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'slide-in-right': 'slide-in-right 0.3s cubic-bezier(0.32,0.72,0.3,1.25)',
+				'stagger-fade-in': 'stagger-fade-in 0.6s cubic-bezier(0.26,0.91,0.6,1.2) both',
+				'blur-in': 'blur-in 0.4s ease-out both',
+				'spin-slow': 'spin-slow 6s linear infinite',
 				'marquee': 'marquee 30s linear infinite'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

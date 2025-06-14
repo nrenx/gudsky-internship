@@ -51,6 +51,11 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --gold: 48 96% 60%;
+    --emerald: 158 64% 52%;
+    --teal: 172 52% 50%;
+    --navy: 222 47% 11%;
   }
 
   .dark {
@@ -100,4 +105,35 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .animate-stagger {
+    animation: stagger-fade-in 0.7s both;
+  }
+  .animate-blur-in {
+    animation: blur-in 0.5s both;
+  }
+  .animate-spin-slow {
+    animation: spin-slow 6s linear infinite;
+  }
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .bg-emerald {
+    background-color: hsl(var(--emerald));
+  }
+  .text-emerald {
+    color: hsl(var(--emerald));
+  }
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+  .text-navy {
+    color: hsl(var(--navy));
+  }
+  // Add utility classes to ease new palette usage everywhere.
 }
