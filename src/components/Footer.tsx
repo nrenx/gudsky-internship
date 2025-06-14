@@ -1,29 +1,17 @@
 import { Facebook, Linkedin, Mail, Phone, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const XIcon = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-  </svg>
-);
-
+const XIcon = () => <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>;
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+  return <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/bb2f3804-f9d4-4170-83b6-9b3ed54de9e8.png" 
-                alt="Gudsky Research Foundation" 
-                className="h-12 w-12 shadow-lg rounded-lg"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="/lovable-uploads/bb2f3804-f9d4-4170-83b6-9b3ed54de9e8.png" alt="Gudsky Research Foundation" className="h-12 w-12 shadow-lg rounded-lg" loading="lazy" decoding="async" />
               <div>
                 <h3 className="font-bold text-lg bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">Gudsky Research</h3>
                 <p className="text-sm text-gray-300">Foundation</p>
@@ -110,21 +98,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
-                  1/11 Anandnagar Vidyasagar, Dhanbad, Jharkhand
-                </span>
+                <span className="text-gray-300 text-sm">1/11 Anandnagar Vidyasagar Pally, Liluah, Howrah - 711203</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
-                  +91 98765 43210
-                </span>
+                <span className="text-gray-300 text-sm">+91 93056 41151</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
-                  contact@gudsky.org
-                </span>
+                <span className="text-gray-300 text-sm">Support@gudsky.org</span>
               </div>
             </div>
           </div>
@@ -150,8 +132,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
