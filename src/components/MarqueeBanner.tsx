@@ -18,49 +18,38 @@ const MarqueeBanner = () => {
     },
   ];
 
+  // The outer wrapper will hide overflow, the track will animate, and inside the track are two sets of achievements in a row
   return (
     <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 py-4 overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {/* First set of achievements */}
-        {achievements.map((item, index) => (
-          <div key={`first-${index}`} className="flex items-center mx-8 text-white">
-            {item.isClickable ? (
-              <Link 
-                to={item.link} 
-                className="flex items-center hover:text-yellow-300 transition-colors cursor-pointer"
-              >
-                <item.icon className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium underline">{item.text}</span>
-              </Link>
-            ) : (
-              <>
-                <item.icon className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium">{item.text}</span>
-              </>
-            )}
-            <div className="w-2 h-2 bg-white/50 rounded-full ml-8" />
-          </div>
-        ))}
-        {/* Second set of achievements for seamless loop */}
-        {achievements.map((item, index) => (
-          <div key={`second-${index}`} className="flex items-center mx-8 text-white">
-            {item.isClickable ? (
-              <Link 
-                to={item.link} 
-                className="flex items-center hover:text-yellow-300 transition-colors cursor-pointer"
-              >
-                <item.icon className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium underline">{item.text}</span>
-              </Link>
-            ) : (
-              <>
-                <item.icon className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium">{item.text}</span>
-              </>
-            )}
-            <div className="w-2 h-2 bg-white/50 rounded-full ml-8" />
-          </div>
-        ))}
+      <div className="relative w-full">
+        <div
+          className="flex w-max animate-marquee"
+          style={{
+            // Ensures the combined items render in a single row, wide enough for the animation
+            minWidth: "200%",
+          }}
+        >
+          {/* Render two sets for seamless loop */}
+          {[...achievements, ...achievements].map((item, index) => (
+            <div key={index} className="flex items-center mx-8 text-white">
+              {item.isClickable ? (
+                <Link
+                  to={item.link}
+                  className="flex items-center hover:text-yellow-300 transition-colors cursor-pointer"
+                >
+                  <item.icon className="w-5 h-5 mr-2" />
+                  <span className="text-sm font-medium underline">{item.text}</span>
+                </Link>
+              ) : (
+                <>
+                  <item.icon className="w-5 h-5 mr-2" />
+                  <span className="text-sm font-medium">{item.text}</span>
+                </>
+              )}
+              <div className="w-2 h-2 bg-white/50 rounded-full ml-8" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
