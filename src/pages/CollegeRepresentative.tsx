@@ -134,7 +134,8 @@ const CollegeRepresentative = () => {
       <Navigation />
       <main className="pt-16">
         {/* Animated Hero Visual Layer */}
-        <section className="relative flex flex-col items-center justify-center h-[360px] md:h-[390px] px-4 pt-4 pb-2 md:pt-10 overflow-hidden">
+        {/* ---- INCREASED TOP PADDING BELOW ---- */}
+        <section className="relative flex flex-col items-center justify-center h-[360px] md:h-[390px] px-4 pt-20 md:pt-28 pb-2 md:pb-8 overflow-hidden">
           <div style={heroGradientStyle} className="pointer-events-none blur-2xl opacity-75"></div>
           <div className="absolute inset-0 flex justify-center items-start pointer-events-none z-0">
             <div className="hidden md:block absolute left-24 top-16 animate-pulse">
