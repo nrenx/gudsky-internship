@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -90,11 +89,6 @@ const Career = () => {
                     </div>
                     <div className="flex items-center gap-2 mb-2">
                       <CardTitle className="text-xl">{program.title}</CardTitle>
-                      {program.featured && (
-                        <Badge className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black animate-fade-in">
-                          🌟 Featured
-                        </Badge>
-                      )}
                     </div>
                     <CardDescription className="text-base">
                       {program.description}
