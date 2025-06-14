@@ -135,5 +135,5 @@
   .text-navy {
     color: hsl(var(--navy));
   }
-  // Add utility classes to ease new palette usage everywhere.
+  /* Add utility classes to ease new palette usage everywhere. */
 }
