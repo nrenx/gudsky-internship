@@ -21,7 +21,8 @@ const Navigation = () => {
     { name: "About", href: "/about" },
     { name: "Courses", href: "/courses" },
     { name: "Dr. Sita Rani", href: "/dr-sita-rani" },
-    { name: "Research", href: "/research" }
+    { name: "Research", href: "/research" },
+    { name: "Career", href: "/career" }
   ];
 
   return (

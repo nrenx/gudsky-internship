@@ -12,6 +12,8 @@ import DrSitaRani from "./pages/DrSitaRani";
 import Research from "./pages/Research";
 import StudentRegistration from "./pages/StudentRegistration";
 import TeacherRegistration from "./pages/TeacherRegistration";
+import Career from "./pages/Career";
+import CollegeRepresentative from "./pages/CollegeRepresentative";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/all-courses" element={<Courses />} />
           <Route path="/dr-sita-rani" element={<DrSitaRani />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/career/college-representative" element={<CollegeRepresentative />} />
           <Route path="/register/student" element={<StudentRegistration />} />
           <Route path="/register/teacher" element={<TeacherRegistration />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
